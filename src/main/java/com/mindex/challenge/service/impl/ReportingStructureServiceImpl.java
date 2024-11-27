@@ -30,8 +30,7 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
 
         //ensure there is a valid employee for the given ID
         if(employee == null){
-            LOG.error("Error: Invalid employeeId");
-            return null;
+            throw new RuntimeException("Invalid employeeId: " + employeeId);
         }
 
         int reports = calculateReports(employee);
