@@ -11,7 +11,6 @@ import java.util.UUID;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
-
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeServiceImpl.class);
 
     @Autowired
