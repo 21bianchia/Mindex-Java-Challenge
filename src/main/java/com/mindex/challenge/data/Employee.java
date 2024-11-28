@@ -10,6 +10,16 @@ public class Employee {
     private String department;
     private List<Employee> directReports;
 
+    public Employee(String employeeId, String firstName, String lastName, String position,
+                    String department, List<Employee> directReports) {
+        this.employeeId = employeeId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.position = position;
+        this.department = department;
+        this.directReports = directReports;
+    }
+
     public Employee() {
     }
 

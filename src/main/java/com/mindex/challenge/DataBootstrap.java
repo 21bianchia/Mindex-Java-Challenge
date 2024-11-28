@@ -42,7 +42,7 @@ public class DataBootstrap {
             employeeRepository.insert(employee);
         }
 
-        //added to bootstrap compensation db
+        //Bootstrap compensation database
         inputStream = this.getClass().getResourceAsStream(COMPENSATION_DATASTORE_LOCATION);
 
         Compensation[] compensations = null;

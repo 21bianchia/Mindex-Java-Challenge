@@ -39,21 +39,20 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
         return reportingStructure;
     }
 
-    private int calculateReports(Employee employee){
-        /*
-        this function assumes a valid reporting structure exists for the organization
+    /*
+        this function assumes a valid reporting structure exists for the organization.
         an example of an invalid structure would be having two employees who report to each other,
         which would result in an infinite loop
-        */
+    */
+    private int calculateReports(Employee employee){
 
         int reports = 0;
 
         /*
-        gets the employee info from the db to ensure all fields are filled correctly
-        fixes an issue where the list of direct reports gives the employee ID,
-        but not the rest of the data
+            gets the employee info from the db to ensure all fields are filled correctly.
+            fixes an issue where the list of direct reports gives the employee ID,
+            but not the rest of the data
         */
-
         employee = employeeService.read(employee.getEmployeeId());
 
         //only recurse if there are direct reports, otherwise return 0 as base case

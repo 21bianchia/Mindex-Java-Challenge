@@ -7,11 +7,14 @@ public class Compensation {
     private int salary;
     private LocalDate effectiveDate;
 
-    //Note on parameters:
-    // using string for id instead of storing employee object,
-    //    since we don't we to duplicate data in the databases
-    // using int for salary to represent annual salary in $
-    // LocalDate will show employee start date in yyyy-mm-dd format
+    /*
+        Note on parameters:
+
+     - using string for id instead of storing employee object,
+        since we don't we to duplicate data in the databases
+     - using int for salary to represent annual salary in $
+     - LocalDate will show employee start date in yyyy-mm-dd format
+    */
 
     public Compensation() {
     }
